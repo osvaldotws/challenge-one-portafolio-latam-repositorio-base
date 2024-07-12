@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Fulana de Tal</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="menu">
+        <nav class="menu__container">
+            <h1 class="menu__title">
+                <img src="assets/vector.png" alt="Logo" class="menu__logo">
+                Fulana de Tal
+            </h1>
+            <div class="menu__right">
+                <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu__hamburguer" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="menu__list">
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#hobbies">Hobbies</a></li>
+                    <li><a href="#formacion">Formación</a></li>
+                    <li><a href="#xp">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="title">
+            <div class="title__container">
+                <h2 class="title__bio">Hola, mi nombre es Fulana de Tal y construyo páginas web</h2>
+                <h3 class="title__subsection">Soy formada en desarrollo web y actualmente estoy participando del proyecto Oracle ONE en Alura Latam.</h3>
+                <ul class="title__network">
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">Github <i class="fab fa-github"></i></a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn <i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram <i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" target="_blank" rel="noopener noreferrer">Currículo <i class="fas fa-file-alt"></i></a></li>
+                </ul>
+            </div>
+            <img class="title__profile" src="assets/profile.png" alt="Foto de Fulana de Tal">
+        </section>
+
+        <section id="sobre-mi" class="about">
+            <div class="about__container">
+                <h3 class="about__title">Sobre mí</h3>
+                <p class="about__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque velit velit, volutpat semper dignissim dictum, imperdiet ut lacus. Quisque gravida ex a mattis pretium. Suspendisse potenti. Ut semper sagittis ligula et lacinia.</p>
+                <p class="about__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque velit velit, volutpat semper dignissim dictum, imperdiet ut lacus. Quisque gravida ex a mattis pretium. Suspendisse potenti. Ut semper sagittis ligula et lacinia. Aenean sit amet felis venenatis, egestas metus vitae, aliquet metus.</p>
+                <img src="assets/signature.png" alt="Firma" class="about__signature">
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <h3 class="skills__title">Skills</h3>
+            <div class="skills__line">
+                <div class="skills__box">
+                    <img src="assets/htlm.png" alt="HTML5">
+                    <p>HTML 5</p>
+                </div>
+                <div class="skills__box">
+                    <img src="assets/js_icon.png" alt="JavaScript">
+                    <p>JavaScript</p>
+                </div>
+                <div class="skills__box">
+                    <img src="assets/php_icon.png" alt="PHP">
+                    <p>PHP</p>
+                </div>
+                <div class="skills__box">
+                    <img src="assets/nodejs_icon.png" alt="Node JS">
+                    <p>Node JS</p>
+                </div>
+                <div class="skills__box">
+                    <img src="assets/react_icon.png" alt="React">
+                    <p>React</p>
+                </div>
+                <div class="skills__box">
+                    <img src="assets/css_icon.png" alt="CSS">
+                    <p>CSS</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="hobbies" class="hobbies">
+            <h3 class="hobbies__title">Hobbies</h3>
+            <div class="hobbies__line">
+                <div class="hobbies__box">
+                    <img src="assets/skate_icon.png" alt="Patinaje">
+                    <p>Patinaje</p>
+                </div>
+                <div class="hobbies__box">
+                    <img src="assets/guitar_icon.png" alt="Tocar bajo">
+                    <p>Tocar bajo</p>
+                </div>
+                <div class="hobbies__box">
+                    <img src="assets/headphones_icon.png" alt="Oir música">
+                    <p>Oir música</p>
+                </div>
+                <div class="hobbies__box">
+                    <img src="assets/tv_icon.png" alt="Ver series">
+                    <p>Ver series</p>
+                </div>
+                <div class="hobbies__box">
+                    <img src="assets/forkspoon_icon.png" alt="Cocinar">
+                    <p>Cocinar</p>
+                </div>
+                <div class="hobbies__box">
+                    <img src="assets/camera_icon.png" alt="Tomar fotos">
+                    <p>Tomar fotos</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="formacion" class="academic">
+            <h2 class="academic__title">Formación académica</h2>
+            <div class="academic__courses">
+                <div class="academic__courses__box">
+                    <div class="academic__courses__list">
+                        <img src="assets/ufpr_logo.png" alt="Logo UFPR" class="academic__courses__item__img">
+                        <h4 class="academic__courses__item__title">Análisis de datos</h4>
+                        <p class="academic__courses__item__subtitle">2018 - UFPR</p>
+                    </div>
+                </div>
+                <div class="academic__courses__box">
+                    <div class="academic__courses__list">
+                        <img src="assets/alura_logo.png" alt="Logo Alura" class="academic__courses__item__img">
+                        <h4 class="academic__courses__item__title">Formación en UX Design</h4>
+                        <p class="academic__courses__item__subtitle">2019 - Alura</p>
+                    </div>
+                </div>
+                <div class="academic__courses__box">
+                    <div class="academic__courses__list">
+                        <img src="assets/ufrj_logo.png" alt="Logo UFRJ" class="academic__courses__item__img">
+                        <h4 class="academic__courses__item__title">Posgrado en diseño</h4>
+                        <p class="academic__courses__item__subtitle">En curso - UFRJ</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="xp" class="experience">
+            <h2 class="experience__section__title">Experiencia Profesional</h2>
+            <div class="experience__box">
+                <img src="assets/decod_print.png" alt="Encriptador de texto" class="experience__img">
+                <div class="experience__info">
+                    <h3 class="experience__title">Encriptador de texto</h3>
+                    <p class="experience__text">Challenge Alura Codificador</p>
+                    <div class="experience__description">
+                        <a href="#" class="experience__repo" target="_blank">Repositorio</a>
+                        <a href="#" class="experience__demo" target="_blank">Ver demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="experience__box">
+                <img src="assets/forca_print.png" alt="Juego creado con HTML y JavaScript" class="experience__img">
+                <div class="experience__info">
+                    <h3 class="experience__title">Juego creado con HTML y JavaScript</h3>
+                    <p class="experience__text">Challenge Oracle</p>
+                    <div class="experience__description">
+                        <a href="#" class="experience__repo" target="_blank">Repositorio</a>
+                        <a href="#" class="experience__demo" target="_blank">Ver demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="experience__box">
+                <img src="assets/secretcode_print.png" alt="Encriptador de texto" class="experience__img">
+                <div class="experience__info">
+                    <h3 class="experience__title">Encriptador de texto</h3>
+                    <p class="experience__text">Challenge Oracle</p>
+                    <div class="experience__description">
+                        <a href="#" class="experience__repo" target="_blank">Repositorio</a>
+                        <a href="#" class="experience__demo" target="_blank">Ver demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="experience__box">
+                <img src="assets/forca2_print.png" alt="Juego creado con HTML, CSS y JavaScript" class="experience__img">
+                <div class="experience__info">
+                    <h3 class="experience__title">Juego creado con HTML, CSS y JavaScript</h3>
+                    <p class="experience__text">Challenge Oracle</p>
+                    <div class="experience__description">
+                        <a href="#" class="experience__repo" target="_blank">Repositorio</a>
+                        <a href="#" class="experience__demo" target="_blank">Ver demo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="formcontato">
+            <div class="formcontato__contacto">
+                <div class="formcontato__text">
+                    <h2 class="formcontato__title">Contacto</h2>
+                    <h3 class="formcontato__subtext">¿Quieres contactarme?</h3>
+                    <p class="formcontato__subtext">Complete el siguiente formulario y me pondré en contacto con usted lo antes posible.</p>
+                    <form class="formcontato__form" name="form">
+                        <input class="formcontato__input" type="text" name="nombre" placeholder="Nombre">
+                        <input class="formcontato__input" type="email" name="email" placeholder="E-mail">
+                        <input class="formcontato__input" type="text" name="asunto" placeholder="Asunto">
+                        <textarea class="formcontato__textarea" rows="5" cols="40" id="mensagem" name="mensaje" placeholder="Mensaje"></textarea>
+                        <button type="submit" class="formcontato__botao">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Desarrollado por Fulana de Tal</p>
+        <p>2023</p>
+    </footer>
+
+    <script src="./validacion.js"></script>
+</body>
+</html>

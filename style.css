@@ -1,0 +1,797 @@
+:root {
+    --cor-de-fundo: #F5F5F5;
+    --cor-de-link: #000;
+    --cor-de-texto: #464646;
+    --azul-destaque: #2A7AE4;
+    --cor-branco: #FFF;
+    --cor-hover: #0056b3;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-de-texto);
+    line-height: 1.6;
+}
+
+.tudo {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header and Navigation */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: var(--cor-de-fundo);
+    padding: 1rem;
+}
+
+.menu__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu__header {
+    display: flex;
+    align-items: center;
+}
+
+.menu__title {
+    display: flex;
+    align-items: center;
+}
+
+.menu__logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.menu__right {
+    display: flex;
+    align-items: center;
+}
+
+.menu__list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu__list li {
+    margin-left: 1rem;
+}
+
+.menu__list a {
+    color: var(--cor-de-link);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.menu__list a:hover {
+    color: var(--azul-destaque);
+}
+
+.menu__hamburguer {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.menu__hamburguer span {
+    width: 2rem;
+    height: 0.25rem;
+    background: var(--cor-de-texto);
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+
+.dark-mode-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--cor-de-texto);
+    margin-left: 1rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    color: var(--azul-destaque);
+}
+
+/* Main Content */
+main {
+    padding-top: 80px;
+}
+
+/* Hero Section */
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 64px 20px;
+}
+
+.title__container {
+    width: 60%;
+}
+
+.title__bio {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.title__subsection {
+    font-size: 20px;
+    margin-bottom: 32px;
+    animation: fadeInUp 1s ease-out 0.3s;
+    animation-fill-mode: both;
+}
+
+.title__network {
+    display: flex;
+    list-style: none;
+    animation: fadeInUp 1s ease-out 0.6s;
+    animation-fill-mode: both;
+}
+
+.title__network li {
+    margin-right: 32px;
+}
+
+.title__network a {
+    color: var(--cor-de-link);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.title__network a:hover {
+    color: var(--azul-destaque);
+}
+
+.title__profile {
+    width: 368px;
+    height: 368px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    animation: fadeInRight 1s ease-out;
+}
+
+/* About Section */
+.about {
+    background: var(--cor-branco);
+    padding: 64px 20px;
+}
+
+.about__container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about__title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.about__paragraph {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.about__signature {
+    display: block;
+    margin: 32px auto 0;
+    max-width: 200px;
+}
+
+/* Skills and Hobbies Sections */
+.skills, .hobbies {
+    padding: 64px 20px;
+}
+
+.skills__title, .hobbies__title {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.skills__line, .hobbies__line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+}
+
+.skills__box, .hobbies__box {
+    background-color: var(--cor-branco);
+    width: calc(16.666% - 32px);
+    padding: 24px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.skills__box:hover, .hobbies__box:hover {
+    transform: translateY(-10px);
+}
+
+.skills__box img, .hobbies__box img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+    object-fit: contain;
+}
+
+/* Academic Section */
+.academic {
+    background-color: var(--cor-de-fundo);
+    padding: 64px 20px;
+}
+
+.academic__title {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.academic__courses {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.academic__courses__box {
+    width: calc(33.333% - 32px);
+    background-color: var(--cor-branco);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.academic__courses__list {
+    padding: 24px;
+}
+
+.academic__courses__item__img {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f8f8;
+}
+
+.academic__courses__item__img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.academic__courses__item__title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 16px 0 8px;
+}
+
+/* Experience Section */
+.experience {
+    padding: 64px 20px;
+}
+
+.experience__section__title {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.experience__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 64px;
+    background-color: var(--cor-branco);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.experience__box:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.experience__img {
+    width: 50%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.experience__info {
+    width: 50%;
+    padding: 32px;
+}
+
+.experience__title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.experience__text {
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+.experience__description {
+    display: flex;
+    gap: 16px;
+}
+
+.experience__repo, .experience__demo {
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--azul-destaque);
+    border: 1px solid var(--azul-destaque);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.experience__demo {
+    background-color: var(--azul-destaque);
+    color: var(--cor-branco);
+}
+
+.experience__repo:hover, .experience__demo:hover {
+    background-color: var(--cor-hover);
+    color: var(--cor-branco);
+}
+
+/* Contact Form */
+.formcontato {
+    padding: 64px 20px;
+}
+
+.formcontato__contacto {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.formcontato__text {
+    width: 100%;
+    max-width: 500px;
+}
+
+.formcontato__title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.formcontato__subtext {
+    font-size: 16px;
+    margin-bottom: 32px;
+}
+
+.formcontato__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.formcontato__input, .formcontato__textarea {
+    padding: 16px;
+    margin-bottom: 24px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.formcontato__input:focus, .formcontato__textarea:focus {
+    outline: none;
+    border-color: var(--azul-destaque);
+}
+
+.formcontato__textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.formcontato__botao {
+    padding: 16px;
+    background-color: var(--azul-destaque);
+    color: var(--cor-branco);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formcontato__botao:hover {
+    background-color: var(--cor-hover);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--cor-branco);
+    padding: 32px 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    --cor-de-fundo: #333;
+    --cor-de-link: #fff;
+    --cor-de-texto: #f0f0f0;
+    --cor-branco: #444;
+}
+
+.dark-mode .menu,
+.dark-mode .footer {
+    background-color: #222;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .title {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 32px 20px;
+    }
+
+    .title__container {
+        width: 100%;
+    }
+
+    .title__profile {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 32px;
+    }
+
+    .title__network {
+        justify-content: center;
+    }
+
+    .skills__box, .hobbies__box {
+        width: calc(33.333% - 32px);
+    }
+
+    .academic__courses__box {
+        width: calc(50% - 32px);
+    }
+
+    .experience__box,
+    .experience__box:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .experience__img, .experience__info {
+        width: 100%;
+    }
+
+    .experience__img {
+        height: 300px;
+    }
+
+    .formcontato__contacto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formcontato__text {
+        margin-bottom: 32px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu__container {
+        flex-wrap: wrap;
+    }
+
+    .menu__right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: auto;
+        margin-left: auto;
+    }
+
+    .menu__list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--cor-de-fundo);
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .menu__list.active {
+        display: flex;
+    }
+
+    .menu__list li {
+        margin: 10px 0;
+    }
+
+    .menu__hamburguer {
+        display: flex;
+        margin-left: 1rem;
+    }
+
+    .menu__hamburguer span {
+        width: 2rem;
+        height: 0.25rem;
+        background: var(--cor-de-texto);
+        border-radius: 10px;
+        transition: all 0.3s linear;
+        position: relative;
+        transform-origin: 1px;
+    }
+
+    .skills__box, .hobbies__box {
+        width: calc(50% - 32px);
+    }
+
+    .academic__courses__box {
+        width: 100%;
+    }
+
+    .dark-mode-toggle {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu__title {
+        font-size: 1.2rem;
+    }
+
+    .menu__logo {
+        width: 20px;
+        height: 20px;
+    }
+
+    .title__bio {
+        font-size: 32px;
+    }
+
+    .title__subsection {
+        font-size: 16px;
+    }
+
+    .title__profile {
+        width: 160px;
+        height: 160px;
+    }
+
+    .title__network {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .title__network li {
+        margin: 8px 16px;
+    }
+
+    .skills__box, .hobbies__box {
+        width: 100%;
+    }
+
+    .experience__img {
+        height: 200px;
+    }
+
+    .experience__title {
+        font-size: 18px;
+    }
+
+    .experience__text {
+        font-size: 14px;
+    }
+
+    .experience__description {
+        flex-direction: column;
+    }
+
+    .experience__repo, .experience__demo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .formcontato__title {
+        font-size: 24px;
+    }
+
+    .formcontato__subtext {
+        font-size: 14px;
+    }
+
+    .dark-mode-toggle,
+    .menu__hamburguer {
+        font-size: 1.2rem;
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+}
+
+/* Optimizaciones generales y correcciones */
+.menu__list a i {
+    margin-right: 5px;
+}
+
+.formcontato__form .error-message {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+
+.formcontato__input.error,
+.formcontato__textarea.error {
+    border-color: #ff0000;
+}
+
+/* Estilos para el botón de scroll to top */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--azul-destaque);
+    color: var(--cor-branco);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.scroll-to-top.show {
+    display: block;
+}
+
+/* Ajustes para mejorar la accesibilidad */
+.menu__list a:focus,
+.title__network a:focus,
+.formcontato__input:focus,
+.formcontato__textarea:focus,
+.formcontato__botao:focus,
+.scroll-to-top:focus {
+    outline: 2px solid var(--azul-destaque);
+    outline-offset: 2px;
+}
+
+/* Mejoras en la animación del menú hamburguesa */
+.menu__hamburguer.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu__hamburguer.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu__hamburguer.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Ajustes para mejorar la legibilidad en modo oscuro */
+.dark-mode .skills__box,
+.dark-mode .hobbies__box,
+.dark-mode .academic__courses__box,
+.dark-mode .experience__box {
+    background-color: #555;
+}
+
+.dark-mode .formcontato__input,
+.dark-mode .formcontato__textarea {
+    background-color: #444;
+    color: var(--cor-de-texto);
+    border-color: #666;
+}
+
+.dark-mode .formcontato__input::placeholder,
+.dark-mode .formcontato__textarea::placeholder {
+    color: #aaa;
+}
+
+/* Mejora en la transición al modo oscuro */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu,
+.footer,
+.skills__box,
+.hobbies__box,
+.academic__courses__box,
+.experience__box {
+    transition: background-color 0.3s ease;
+}
+
+/* Ajuste para evitar desbordamiento en dispositivos muy pequeños */
+img {
+    max-width: 100%;
+    height: auto;
+}
